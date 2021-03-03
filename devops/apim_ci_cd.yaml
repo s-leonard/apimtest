@@ -26,9 +26,9 @@ stages:
 - stage: UploadARMTemplates
   displayName: Upload ARM templates
   variables:
-    rgName: 'apim'
+    rgName: 'apimws'
     sourceAPIMName: 'base-apim'
-    destinationAPIMName: 'apimBasedevAPIM'
+    destinationAPIMName: 'apimwsdevAPIM'
   jobs:
     - job: UploadARMTemplates
       displayName: Upload ARM Templates to Storage Account
@@ -62,9 +62,9 @@ stages:
   displayName: Deploy Dev
   dependsOn: UploadARMTemplates
   variables:
-    rgName: 'apim'
+    rgName: 'apimws'
     sourceAPIMName: 'base-apim'
-    destinationAPIMName: 'apimBasedevAPIM'
+    destinationAPIMName: 'apimwsdevAPIM'
   jobs:
     - deployment: 'DeployDevAPIM'
       displayName: 'Deploy to Dev APIM'
@@ -111,9 +111,9 @@ stages:
   displayName: Deploy Prod
   dependsOn: DeployToDev
   variables:
-    rgName: 'apim'
+    rgName: 'apimws'
     sourceAPIMName: 'base-apim'
-    destinationAPIMName: 'apimBasedevAPIM'
+    destinationAPIMName: 'apimwsprodAPIM'
   jobs:
     - deployment: 'DeployProdAPIM'
       displayName: 'Deploy to Prod APIM'
