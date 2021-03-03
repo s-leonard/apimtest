@@ -1,5 +1,10 @@
 trigger:
-- main
+  branches:
+      include:
+      - '*'  
+  paths:
+    include:
+    - src/api/APIM
 
 variables:
 - name: serviceConnectionName
@@ -7,9 +12,9 @@ variables:
 - name: poolVmImage
   value: 'ubuntu-latest'
 - name: storageAccountName
-  value: 'armtpls'
+  value: 'apimwsstorage'
 - name: storagecontainer
-  value: 'arm'
+  value: 'templates'
 - name: storageloc
   value: 'https://$(storageAccountName).blob.core.windows.net/$(storagecontainer)/build$(Build.BuildId)'
 - name: apimTemplatesLocation
