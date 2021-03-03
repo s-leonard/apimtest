@@ -1,0 +1,10 @@
+[{
+    "allowedMemberTypes": [
+      "Application"
+    ],
+    "description": "description",
+    "displayName": "readrole",
+    "isEnabled": "true",
+    "value": "readrole"
+}]
+
