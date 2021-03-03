@@ -7,8 +7,8 @@ trigger:
     - environment
 
 variables:
-  newResourceGroupName: apim
-  resourcePrefix: apimBase
+  newResourceGroupName: apimws
+  resourcePrefix: apimws
   sqlAdministratorLoginPassword: ComplexPs123#$
   apimPublisherEmail: youremail@outlook.com
 
